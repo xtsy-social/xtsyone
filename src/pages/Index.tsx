@@ -1,12 +1,36 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from "react";
+import Hero from "@/components/Hero";
+import Testimonials from "@/components/Testimonials";
+import Features from "@/components/Features";
+import Rooms from "@/components/Rooms";
+import Gallery from "@/components/Gallery";
+import About from "@/components/About";
 
 const Index = () => {
+  // Scroll to section if URL has hash
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 500);
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Hero />
+      <Testimonials />
+      <Features />
+      <Rooms />
+      <Gallery />
+      <About />
     </div>
   );
 };
