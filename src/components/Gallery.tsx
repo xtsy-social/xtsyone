@@ -213,7 +213,8 @@ const Gallery = () => {
         </div>
       )}
 
-      <style jsx>{`
+      <style>
+        {`
         .hideScrollbar::-webkit-scrollbar {
           display: none;
         }
@@ -221,7 +222,8 @@ const Gallery = () => {
           -ms-overflow-style: none;
           scrollbar-width: none;
         }
-      `}</style>
+        `}
+      </style>
     </section>
   );
 };
