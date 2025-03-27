@@ -80,7 +80,7 @@ const Testimonials = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}>
             <div className="chip bg-accent text-accent-foreground mb-4">Testimonials</div>
-            <h2 className="section-heading">Hear About Us</h2>
+            <h2 className="section-heading">Hear XTSY Experiences</h2>
             <p className="section-subheading">
               Discover what our guests have to say about their experience at XTSY Travellers Hostel. 
               From solo travelers to group bookings, we've created memorable stays for all.
