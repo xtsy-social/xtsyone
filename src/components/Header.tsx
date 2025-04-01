@@ -47,7 +47,7 @@ const Header = () => {
           className="relative z-10 flex items-center animate-fade-in"
         >
           <img 
-            src="/Color logo - no background.png" 
+            src="/lovable-uploads/4faa6d49-1f02-44b8-8778-58860cca7c30.png" 
             alt="XTSY Travellers Hostel Logo" 
             className="h-12 md:h-14"
           />

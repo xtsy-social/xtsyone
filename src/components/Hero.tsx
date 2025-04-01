@@ -34,7 +34,7 @@ const Hero = () => {
           <div className={`transition-all duration-700 delay-300 transform ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             <div className="mb-8">
               <img 
-                src="/Color logo - no background.png" 
+                src="/lovable-uploads/4faa6d49-1f02-44b8-8778-58860cca7c30.png" 
                 alt="XTSY Travellers Hostel Logo" 
                 className="h-24 md:h-32 mb-4"
               />
