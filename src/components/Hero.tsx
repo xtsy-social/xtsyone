@@ -32,7 +32,13 @@ const Hero = () => {
       <div className="container-section relative z-20 h-full flex flex-col justify-center items-start pt-16">
         <div className="max-w-2xl text-white">
           <div className={`transition-all duration-700 delay-300 transform ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-            <div className="chip bg-white/20 text-white mb-6">XTSY Travellers Hostel</div>
+            <div className="mb-8">
+              <img 
+                src="/Color logo - no background.png" 
+                alt="XTSY Travellers Hostel Logo" 
+                className="h-24 md:h-32 mb-4"
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-6">
               Explore the Shillong Vibe
             </h1>

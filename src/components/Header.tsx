@@ -44,9 +44,13 @@ const Header = () => {
       <div className="container-section flex items-center justify-between">
         <Link 
           to="/" 
-          className="relative z-10 text-xl md:text-2xl font-medium tracking-tight animate-fade-in"
+          className="relative z-10 flex items-center animate-fade-in"
         >
-          <span className="text-primary">XTSY</span> Travellers Hostel
+          <img 
+            src="/Color logo - no background.png" 
+            alt="XTSY Travellers Hostel Logo" 
+            className="h-12 md:h-14"
+          />
         </Link>
 
         {/* Desktop Navigation */}
