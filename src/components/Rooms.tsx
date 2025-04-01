@@ -12,7 +12,7 @@ const dormitories = [
     id: "dorm-8",
     title: "Bed in 8 Bed Dormitory",
     price: 649,
-    image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "/lovable-uploads/f7ebc711-233d-4f6d-a9ed-66b740e4d678.png",
     features: ["Individual Lockers", "Reading Light", "Power Socket", "Shared Bathroom", "Common Lounge Access"],
     capacity: 1,
   },
@@ -20,7 +20,7 @@ const dormitories = [
     id: "dorm-6-female",
     title: "Bed in 6 Bed Female Dormitory",
     price: 699,
-    image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "/lovable-uploads/92b14139-422e-48f4-8e88-dba497cbe9bd.png",
     features: ["Female Only", "Extra Privacy", "Individual Lockers", "Reading Light", "Power Socket", "Shared Bathroom", "Common Lounge Access"],
     capacity: 1,
   },
@@ -28,7 +28,7 @@ const dormitories = [
     id: "dorm-6-mixed",
     title: "Bed in 6 Bed Mixed Dormitory",
     price: 699,
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "/lovable-uploads/b48f359c-19f5-4b1e-b182-b660b5c5c7f9.png",
     features: ["Individual Lockers", "Reading Light", "Power Socket", "Shared Bathroom", "Common Lounge Access"],
     capacity: 1,
   },
@@ -36,7 +36,7 @@ const dormitories = [
     id: "dorm-4-mixed",
     title: "Bed in 4 Bed Mixed Dormitory",
     price: 849,
-    image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "/lovable-uploads/b2876113-b46c-4ba6-b33c-41973212e8d9.png",
     features: ["Enhanced Privacy", "Individual Lockers", "Reading Light", "Power Socket", "Shared Bathroom", "Common Lounge Access"],
     capacity: 1,
   },
@@ -47,10 +47,42 @@ const privateRooms = [
     id: "king-mountain",
     title: "King Room With Mountain View",
     price: 3999,
-    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "/lovable-uploads/32c0e8aa-31d2-495f-a611-798f36da7d20.png",
     features: ["Private Room", "King Size Bed", "Private Bathroom", "Mountain View", "Work Desk", "Free Breakfast", "Room Service"],
     capacity: 2,
   },
+  {
+    id: "deluxe-room",
+    title: "Deluxe Room with Forest View",
+    price: 3499,
+    image: "/lovable-uploads/8480eeae-3962-4cac-b63c-5976012e9498.png",
+    features: ["Private Room", "Queen Size Bed", "Private Bathroom", "Forest View", "Sitting Area", "Free Breakfast"],
+    capacity: 2,
+  },
+  {
+    id: "premium-room",
+    title: "Premium Room with Balcony",
+    price: 4299,
+    image: "/lovable-uploads/83fa557c-0e55-4d11-9dd8-eb3ee61c16cd.png",
+    features: ["Private Room", "King Size Bed", "Private Bathroom", "Private Balcony", "Seating Area", "Free Breakfast", "Premium Amenities"],
+    capacity: 2,
+  },
+];
+
+// Additional dormitory images for the gallery view
+const dormitoryGalleryImages = [
+  "/lovable-uploads/a09c8c3c-479f-4210-a189-7be9aedbe9af.png",
+  "/lovable-uploads/4cce6ca3-bd2b-4995-83b6-a6fb2d7d7333.png",
+  "/lovable-uploads/6c731f4e-b040-4185-8d37-157019c9d3c4.png",
+  "/lovable-uploads/bbbafc6f-aa8f-43fa-920b-3090b998c8b4.png"
+];
+
+// Additional private room images for the gallery view
+const privateRoomGalleryImages = [
+  "/lovable-uploads/87da245e-4046-470b-b9a2-7ff7c36d2840.png",
+  "/lovable-uploads/e03af32e-26b7-4292-8260-18fe3db6a55a.png",
+  "/lovable-uploads/1db53c8c-3ade-439f-99a8-6fe0aabe7cc4.png",
+  "/lovable-uploads/e3b3a20c-4ef3-41d2-9b50-bb35467060e8.png"
 ];
 
 const Rooms = () => {
@@ -58,6 +90,7 @@ const Rooms = () => {
   const roomsRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
   const [openDormitory, setOpenDormitory] = useState<string | null>(null);
+  const [activeGallery, setActiveGallery] = useState<string | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -80,6 +113,10 @@ const Rooms = () => {
 
   const toggleDormitory = (id: string) => {
     setOpenDormitory(prev => prev === id ? null : id);
+  };
+
+  const toggleGallery = (type: string) => {
+    setActiveGallery(prev => prev === type ? null : type);
   };
 
   return (
@@ -159,6 +196,38 @@ const Rooms = () => {
                   </Collapsible>
                 ))}
               </div>
+              
+              {/* Dormitory Gallery - Mobile */}
+              <div className="mt-6">
+                <Collapsible 
+                  open={activeGallery === 'dormitories'}
+                  onOpenChange={() => toggleGallery('dormitories')}
+                  className="border rounded-lg overflow-hidden bg-background shadow-sm"
+                >
+                  <CollapsibleTrigger asChild>
+                    <Button variant="outline" className="w-full justify-between" size="lg">
+                      <span>View Dormitory Gallery</span>
+                      {activeGallery === 'dormitories' ? (
+                        <ChevronUp className="h-4 w-4 ml-2" />
+                      ) : (
+                        <ChevronDown className="h-4 w-4 ml-2" />
+                      )}
+                    </Button>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <div className="grid grid-cols-2 gap-2 p-4">
+                      {dormitoryGalleryImages.map((img, index) => (
+                        <img 
+                          key={index}
+                          src={img}
+                          alt={`Dormitory image ${index + 1}`}
+                          className="rounded-md w-full h-40 object-cover"
+                        />
+                      ))}
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
+              </div>
             </div>
 
             {/* Private Rooms Section */}
@@ -205,6 +274,38 @@ const Rooms = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+              
+              {/* Private Rooms Gallery - Mobile */}
+              <div className="mt-6">
+                <Collapsible 
+                  open={activeGallery === 'private'}
+                  onOpenChange={() => toggleGallery('private')}
+                  className="border rounded-lg overflow-hidden bg-background shadow-sm"
+                >
+                  <CollapsibleTrigger asChild>
+                    <Button variant="outline" className="w-full justify-between" size="lg">
+                      <span>View Private Room Gallery</span>
+                      {activeGallery === 'private' ? (
+                        <ChevronUp className="h-4 w-4 ml-2" />
+                      ) : (
+                        <ChevronDown className="h-4 w-4 ml-2" />
+                      )}
+                    </Button>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <div className="grid grid-cols-2 gap-2 p-4">
+                      {privateRoomGalleryImages.map((img, index) => (
+                        <img 
+                          key={index}
+                          src={img}
+                          alt={`Private room image ${index + 1}`}
+                          className="rounded-md w-full h-40 object-cover"
+                        />
+                      ))}
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
               </div>
             </div>
           </div>
@@ -278,6 +379,28 @@ const Rooms = () => {
                     </div>
                   </div>
                 ))}
+                
+                {/* Desktop Dormitory Gallery */}
+                <div className={cn(
+                  "bg-background rounded-lg overflow-hidden border shadow-sm transition-all duration-500 transform",
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12",
+                  "delay-550"
+                )}>
+                  <div className="p-6">
+                    <h3 className="text-xl font-medium mb-4">Dormitory Gallery</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {dormitoryGalleryImages.map((img, index) => (
+                        <div key={index} className="relative overflow-hidden rounded-lg h-48 md:h-64">
+                          <img 
+                            src={img}
+                            alt={`Dormitory image ${index + 1}`}
+                            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </TabsContent>
               
               <TabsContent value="private" className="space-y-6">
@@ -289,7 +412,7 @@ const Rooms = () => {
                       isVisible 
                         ? "opacity-100 translate-y-0" 
                         : "opacity-0 translate-y-12",
-                      { "delay-150": index === 0 }
+                      { "delay-150": index === 0, "delay-250": index === 1, "delay-350": index === 2 }
                     )}
                   >
                     <div className="grid grid-cols-1 md:grid-cols-3">
@@ -335,6 +458,28 @@ const Rooms = () => {
                     </div>
                   </div>
                 ))}
+                
+                {/* Desktop Private Room Gallery */}
+                <div className={cn(
+                  "bg-background rounded-lg overflow-hidden border shadow-sm transition-all duration-500 transform",
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12",
+                  "delay-450"
+                )}>
+                  <div className="p-6">
+                    <h3 className="text-xl font-medium mb-4">Private Room Gallery</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {privateRoomGalleryImages.map((img, index) => (
+                        <div key={index} className="relative overflow-hidden rounded-lg h-48 md:h-64">
+                          <img 
+                            src={img}
+                            alt={`Private room image ${index + 1}`}
+                            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </TabsContent>
             </Tabs>
           </div>
