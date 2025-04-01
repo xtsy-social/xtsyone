@@ -11,7 +11,7 @@ const featuresList = [
     description: "Perfect for independent adventurers looking to explore Meghalaya's natural beauty and vibrant culture.",
     details: "Join our guided hikes and treks across Meghalaya's stunning landscapes. After a day of exploration, unwind in Shillong's music scene and cozy cafes. Connect with like-minded travelers in our community spaces.",
     icon: MapPin,
-    image: "https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
   {
     id: "group-booking",
@@ -19,7 +19,7 @@ const featuresList = [
     description: "Spacious accommodations and facilities for large groups with tailored experiences.",
     details: "Accommodate up to 50 guests comfortably in our various room options. Enjoy meals together at our in-house cafe serving local and international cuisine. Customized itineraries and activities for your group to enjoy Meghalaya together.",
     icon: Users,
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
   {
     id: "weekend-getaway",
@@ -27,7 +27,7 @@ const featuresList = [
     description: "Escape the city hustle with a refreshing weekend in Shillong's clean mountain air.",
     details: "Breathe in some of India's cleanest air while enjoying panoramic mountain views. Just a short flight from major cities, Shillong offers the perfect reset. Relax in our comfortable accommodations surrounded by nature.",
     icon: Calendar,
-    image: "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
   {
     id: "safe-place",
@@ -35,7 +35,7 @@ const featuresList = [
     description: "A secure environment with entertainment options and 24/7 security measures.",
     details: "Enjoy music nights, karaoke sessions, and board games in our common areas. Rest easy with 24/7 CCTV surveillance and dedicated security personnel. Unwind in a safe space that feels like home away from home.",
     icon: Shield,
-    image: "https://images.unsplash.com/photo-1520483691742-bada60a1edd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
 ];
 

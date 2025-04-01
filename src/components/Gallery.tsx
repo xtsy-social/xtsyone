@@ -6,44 +6,44 @@ import { Button } from "@/components/ui/button";
 
 const images = [
   {
-    src: "/IMG20250314195521.jpg",
-    alt: "XTSY Hostel Interior",
+    src: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    alt: "Pine Trees in Meghalaya",
   },
   {
-    src: "/IMG20250314195959.jpg",
-    alt: "Hostel Common Area",
+    src: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    alt: "Low Angle View of Trees in Meghalaya",
   },
   {
-    src: "/DJI_20250324_105940_962.jpg",
-    alt: "Aerial View of Hostel",
+    src: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    alt: "Sunlight Through Trees in Meghalaya",
   },
   {
-    src: "/DJI_20250324_111024_658.jpg",
-    alt: "Shillong Landscape",
+    src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    alt: "Mountain Landscape with Sun Rays in Meghalaya",
   },
   {
-    src: "/DJI_20250324_133459_305.jpg",
-    alt: "Mountain Views",
+    src: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    alt: "River Between Mountains in Meghalaya",
   },
   {
-    src: "/DJI_20250324_133441_471.jpg",
-    alt: "Scenic Shillong",
+    src: "/lovable-uploads/16227c91-213c-4788-8f2a-7f395c94c51f.png",
+    alt: "XTSY Hostel in the Pine Forest",
   },
   {
-    src: "/DJI_20250324_133421_247.jpg",
-    alt: "Nature Around Hostel",
+    src: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    alt: "Meghalaya Pine Forest",
   },
   {
-    src: "/DJI_20250324_133542_463.jpg",
-    alt: "Shillong Greenery",
+    src: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    alt: "Towering Trees in Meghalaya",
   },
   {
-    src: "/DJI_20250324_124629_217.jpg",
-    alt: "Lush Landscapes",
+    src: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    alt: "Sunlight in Meghalaya Forest",
   },
   {
-    src: "/DJI_20250324_105947_415.jpg",
-    alt: "Hostel Surroundings",
+    src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    alt: "Meghalaya Mountains with Sunlight",
   },
 ];
 
