@@ -142,7 +142,7 @@ const Rooms = () => {
           <div className="mt-8">
             {/* Dormitories Section - Mobile Optimized */}
             <div className="mb-10">
-              <h3 className="text-2xl font-medium mb-6 flex items-center">
+              <h3 className="text-2xl font-medium mb-6 flex items-center text-destructive">
                 <Users className="mr-2 h-5 w-5" />
                 Dormitories
               </h3>
@@ -202,15 +202,15 @@ const Rooms = () => {
                 <Collapsible 
                   open={activeGallery === 'dormitories'}
                   onOpenChange={() => toggleGallery('dormitories')}
-                  className="border rounded-lg overflow-hidden bg-background shadow-sm"
+                  className="border-2 border-destructive/30 rounded-lg overflow-hidden bg-background shadow-sm"
                 >
                   <CollapsibleTrigger asChild>
-                    <Button variant="outline" className="w-full justify-between" size="lg">
-                      <span>View Dormitory Gallery</span>
+                    <Button variant="outline" className="w-full justify-between border-destructive/30" size="lg">
+                      <span className="text-destructive">View Dormitory Gallery</span>
                       {activeGallery === 'dormitories' ? (
-                        <ChevronUp className="h-4 w-4 ml-2" />
+                        <ChevronUp className="h-4 w-4 ml-2 text-destructive" />
                       ) : (
-                        <ChevronDown className="h-4 w-4 ml-2" />
+                        <ChevronDown className="h-4 w-4 ml-2 text-destructive" />
                       )}
                     </Button>
                   </CollapsibleTrigger>
@@ -232,7 +232,7 @@ const Rooms = () => {
 
             {/* Private Rooms Section */}
             <div>
-              <h3 className="text-2xl font-medium mb-6 flex items-center">
+              <h3 className="text-2xl font-medium mb-6 flex items-center text-destructive">
                 <Home className="mr-2 h-5 w-5" />
                 Private Rooms
               </h3>
@@ -281,15 +281,15 @@ const Rooms = () => {
                 <Collapsible 
                   open={activeGallery === 'private'}
                   onOpenChange={() => toggleGallery('private')}
-                  className="border rounded-lg overflow-hidden bg-background shadow-sm"
+                  className="border-2 border-destructive/30 rounded-lg overflow-hidden bg-background shadow-sm"
                 >
                   <CollapsibleTrigger asChild>
-                    <Button variant="outline" className="w-full justify-between" size="lg">
-                      <span>View Private Room Gallery</span>
+                    <Button variant="outline" className="w-full justify-between border-destructive/30" size="lg">
+                      <span className="text-destructive">View Private Room Gallery</span>
                       {activeGallery === 'private' ? (
-                        <ChevronUp className="h-4 w-4 ml-2" />
+                        <ChevronUp className="h-4 w-4 ml-2 text-destructive" />
                       ) : (
-                        <ChevronDown className="h-4 w-4 ml-2" />
+                        <ChevronDown className="h-4 w-4 ml-2 text-destructive" />
                       )}
                     </Button>
                   </CollapsibleTrigger>
@@ -313,11 +313,11 @@ const Rooms = () => {
           <div className="mt-12">
             <Tabs defaultValue="dormitories" className="w-full">
               <TabsList className="grid w-full grid-cols-2 mb-8">
-                <TabsTrigger value="dormitories" className="text-base">
+                <TabsTrigger value="dormitories" className="text-base text-destructive">
                   <Users className="mr-2 h-4 w-4" />
                   Dormitories
                 </TabsTrigger>
-                <TabsTrigger value="private" className="text-base">
+                <TabsTrigger value="private" className="text-base text-destructive">
                   <Home className="mr-2 h-4 w-4" />
                   Private Rooms
                 </TabsTrigger>
@@ -347,7 +347,7 @@ const Rooms = () => {
                       <div className="md:col-span-2 p-6 flex flex-col justify-between">
                         <div>
                           <div className="flex items-center justify-between mb-2">
-                            <h3 className="text-xl font-medium">{room.title}</h3>
+                            <h3 className="text-xl font-medium text-destructive">{room.title}</h3>
                             <div className="flex items-center text-muted-foreground">
                               <Users className="h-4 w-4 mr-1" />
                               <span className="text-sm">
@@ -382,12 +382,12 @@ const Rooms = () => {
                 
                 {/* Desktop Dormitory Gallery */}
                 <div className={cn(
-                  "bg-background rounded-lg overflow-hidden border shadow-sm transition-all duration-500 transform",
+                  "bg-background rounded-lg overflow-hidden border-2 border-destructive/30 shadow-sm transition-all duration-500 transform",
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12",
                   "delay-550"
                 )}>
                   <div className="p-6">
-                    <h3 className="text-xl font-medium mb-4">Dormitory Gallery</h3>
+                    <h3 className="text-xl font-medium mb-4 text-destructive">Dormitory Gallery</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       {dormitoryGalleryImages.map((img, index) => (
                         <div key={index} className="relative overflow-hidden rounded-lg h-48 md:h-64">
@@ -426,7 +426,7 @@ const Rooms = () => {
                       <div className="md:col-span-2 p-6 flex flex-col justify-between">
                         <div>
                           <div className="flex items-center justify-between mb-2">
-                            <h3 className="text-xl font-medium">{room.title}</h3>
+                            <h3 className="text-xl font-medium text-destructive">{room.title}</h3>
                             <div className="flex items-center text-muted-foreground">
                               <Hotel className="h-4 w-4 mr-1" />
                               <span className="text-sm">
@@ -461,12 +461,12 @@ const Rooms = () => {
                 
                 {/* Desktop Private Room Gallery */}
                 <div className={cn(
-                  "bg-background rounded-lg overflow-hidden border shadow-sm transition-all duration-500 transform",
+                  "bg-background rounded-lg overflow-hidden border-2 border-destructive/30 shadow-sm transition-all duration-500 transform",
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12",
                   "delay-450"
                 )}>
                   <div className="p-6">
-                    <h3 className="text-xl font-medium mb-4">Private Room Gallery</h3>
+                    <h3 className="text-xl font-medium mb-4 text-destructive">Private Room Gallery</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       {privateRoomGalleryImages.map((img, index) => (
                         <div key={index} className="relative overflow-hidden rounded-lg h-48 md:h-64">
