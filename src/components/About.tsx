@@ -43,9 +43,13 @@ const About = () => {
             <div className="chip bg-accent text-accent-foreground mb-4">About Us</div>
             <h2 className="section-heading">XTSY Travellers Hostel</h2>
             <p className="text-muted-foreground mb-6">
-              Discover why guests extend their stays and return season after season to our boutique hostel 
-              in the heart of Shillong. We offer an experience that's increasingly hard to find in today's 
-              commercialized travel landscape.
+              Situated just 9km from Shillong's bustling center, our hostel offers what the city cannot - 
+              a tranquil escape where birdsong replaces traffic noise and fresh mountain air replaces city fumes.
+            </p>
+            <p className="text-muted-foreground mb-6">
+              While the city center pulsates with activity and congestion, our thoughtfully placed retreat allows 
+              you to experience authentic Meghalaya living. After a day of exploring, return to a peaceful haven 
+              where you can truly unwind, surrounded by nature's symphony rather than urban clamor.
             </p>
             <p className="text-muted-foreground mb-6">
               Our handcrafted blend of modern comforts with authentic local charm creates a coveted stay experience 
@@ -57,7 +61,7 @@ const About = () => {
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
                 <p className="text-sm">
-                  XTSY Travellers Hostel, Diengïong, Shillong, Meghalaya 793018
+                  XTSY Travellers Hostel, Diengïong, Shillong, Meghalaya 793018 (9km from city center)
                 </p>
               </div>
               <div className="flex items-start">
