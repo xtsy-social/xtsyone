@@ -43,15 +43,14 @@ const About = () => {
             <div className="chip bg-accent text-accent-foreground mb-4">About Us</div>
             <h2 className="section-heading">XTSY Travellers Hostel</h2>
             <p className="text-muted-foreground mb-6">
-              Nestled in the heart of Shillong, XTSY Travellers Hostel was founded with a vision 
-              to provide travelers with a comfortable home away from home while experiencing the 
-              unique culture and natural beauty of Meghalaya.
+              Discover why guests extend their stays and return season after season to our boutique hostel 
+              in the heart of Shillong. We offer an experience that's increasingly hard to find in today's 
+              commercialized travel landscape.
             </p>
             <p className="text-muted-foreground mb-6">
-              Our hostel combines modern amenities with local charm, creating a space where 
-              travelers from around the world can connect, relax, and create lasting memories.
-              Whether you're a solo backpacker, a family on vacation, or a group of friends on an 
-              adventure, XTSY Hostel welcomes you to experience the magic of Shillong.
+              Our handcrafted blend of modern comforts with authentic local charm creates a coveted stay experience 
+              that books up quickly each season. Many travelers plan their entire Meghalaya journey around our 
+              availability. Join the fortunate travelers who've discovered northeastern India's best-kept secret.
             </p>
 
             <div className="space-y-4 mt-6 mb-8">

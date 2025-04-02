@@ -10,6 +10,9 @@ import About from "@/components/About";
 const Index = () => {
   // Scroll to section if URL has hash
   useEffect(() => {
+    // Set page title
+    document.title = "XTSY Travellers Hostel - Limited Spots Available for Shillong's Premier Stay Experience";
+    
     const hash = window.location.hash;
     if (hash) {
       const element = document.querySelector(hash);

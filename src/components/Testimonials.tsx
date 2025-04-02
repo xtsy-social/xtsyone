@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -9,7 +8,7 @@ const testimonials = [
     id: 1,
     name: "Anisha Ray",
     location: "Delhi",
-    text: "The hostel's location is perfect for exploring Shillong. Staff was incredibly friendly and helped me plan my treks. Made some great friends during my stay!",
+    text: "So glad I booked early! By the time I arrived, they were turning people away. The secret hikes they took us on weren't even on Google Maps. Already reserved for next season!",
     rating: 5,
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80"
   },
@@ -17,7 +16,7 @@ const testimonials = [
     id: 2,
     name: "Rahul Khanna",
     location: "Mumbai",
-    text: "As a solo traveler, safety was my top concern. XTSY Hostel exceeded my expectations with their secure environment and warm community feel. The nature hikes were breathtaking!",
+    text: "Extended my 2-day stay to a full week after seeing how booked they were for the month. Their exclusive night events were the highlight of my Northeast trip - something you won't find in regular hotels.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80"
   },
@@ -25,7 +24,7 @@ const testimonials = [
     id: 3,
     name: "Priya Sharma",
     location: "Bangalore",
-    text: "Our group booking for 15 people was handled flawlessly. The cafe food was delicious and the team games organized by the staff were the highlight of our trip!",
+    text: "Our group almost missed out because we tried booking just 3 weeks in advance. Luckily they had a cancellation! The private cultural experience they arranged was something my friends still talk about months later.",
     rating: 4,
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80"
   },

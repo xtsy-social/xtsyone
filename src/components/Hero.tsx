@@ -36,8 +36,8 @@ const Hero = () => {
               Explore the Shillong Vibe
             </h1>
             <p className="text-xl md:text-2xl text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] mb-8">
-              Take a break! Long nature hikes, team games or just a peaceful view. 
-              Find your vibe - we got your stay covered.
+              Limited spots available! Join the lucky few experiencing Shillong's breathtaking hikes, 
+              exclusive team adventures, and serene views that others only dream about.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-red-600 text-white hover:bg-red-700">

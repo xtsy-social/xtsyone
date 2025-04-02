@@ -1,4 +1,3 @@
-
 import { useRef, useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -8,32 +7,32 @@ const featuresList = [
   {
     id: "solo-travel",
     title: "Solo Travel",
-    description: "Perfect for independent adventurers looking to explore Meghalaya's natural beauty and vibrant culture.",
-    details: "Join our guided hikes and treks across Meghalaya's stunning landscapes. After a day of exploration, unwind in Shillong's music scene and cozy cafes. Connect with like-minded travelers in our community spaces.",
+    description: "Join the exclusive community of independent adventurers discovering Meghalaya's hidden gems and authentic experiences.",
+    details: "Be among the select travelers who get to experience our guided hikes to secret locations not found on tourist maps. Connect with fellow adventurers in our intimate community spaces and gain insider access to Shillong's authentic music scene and local-favorite cafes.",
     icon: MapPin,
     image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
   {
     id: "group-booking",
     title: "Group Booking",
-    description: "Spacious accommodations and facilities for large groups with tailored experiences.",
-    details: "Accommodate up to 50 guests comfortably in our various room options. Enjoy meals together at our in-house cafe serving local and international cuisine. Customized itineraries and activities for your group to enjoy Meghalaya together.",
+    description: "Secure one of our limited group slots for an exclusive, customized Meghalaya experience unlike any other.",
+    details: "Our most sought-after accommodations sell out months in advance. Reserve space for up to 50 guests in our premium rooms and enjoy custom-crafted itineraries that showcase Meghalaya's best-kept secrets. Our seasonal special experiences are available only to group bookings.",
     icon: Users,
     image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
   {
     id: "weekend-getaway",
     title: "Weekend Getaway",
-    description: "Escape the city hustle with a refreshing weekend in Shillong's clean mountain air.",
-    details: "Breathe in some of India's cleanest air while enjoying panoramic mountain views. Just a short flight from major cities, Shillong offers the perfect reset. Relax in our comfortable accommodations surrounded by nature.",
+    description: "Escape to Shillong's limited-season perfect weather while city-dwellers suffer in pollution and heat.",
+    details: "Experience the increasingly rare pleasure of India's cleanest mountain air while urban centers reach record pollution levels. Our premium weekend slots book up quickly, especially during festival seasons. Disconnect in one of our panoramic rooms that showcase stunning sunrise views reserved for early bookers.",
     icon: Calendar,
     image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
   {
     id: "safe-place",
     title: "Safe Place to Chill",
-    description: "A secure environment with entertainment options and 24/7 security measures.",
-    details: "Enjoy music nights, karaoke sessions, and board games in our common areas. Rest easy with 24/7 CCTV surveillance and dedicated security personnel. Unwind in a safe space that feels like home away from home.",
+    description: "Experience our legendary evening events that guests rave about - limited spots available each night.",
+    details: "Our signature music nights and karaoke sessions have become famous among travelers, with many guests extending their stays just to participate. Our exclusive game tournaments and cultural evenings create connections that last long after your stay. Don't miss out on the secure, vibrant atmosphere that's made us Shillong's highest-rated hostel experience.",
     icon: Shield,
     image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
