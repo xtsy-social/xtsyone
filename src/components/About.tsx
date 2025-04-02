@@ -58,16 +58,16 @@ const About = () => {
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
                 <p className="text-sm">
-                  Police Bazar, Shillong, Meghalaya 793001, India
+                  XTSY Travellers Hostel, Diengïong, Shillong, Meghalaya 793018
                 </p>
               </div>
               <div className="flex items-start">
                 <Phone className="h-5 w-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
-                <p className="text-sm">+91 98765 43210</p>
+                <p className="text-sm">+91 98636 27070</p>
               </div>
               <div className="flex items-start">
                 <Mail className="h-5 w-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
-                <p className="text-sm">info@xtsyhostel.com</p>
+                <p className="text-sm">xtsy.one@gmail.com</p>
               </div>
               <div className="flex items-start">
                 <Clock className="h-5 w-5 text-primary mt-0.5 mr-3 flex-shrink-0" />

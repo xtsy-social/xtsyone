@@ -32,13 +32,6 @@ const Hero = () => {
       <div className="container-section relative z-20 h-full flex flex-col justify-center items-start pt-16">
         <div className="max-w-2xl">
           <div className={`transition-all duration-700 delay-300 transform ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-            <div className="mb-8">
-              <img 
-                src="/lovable-uploads/4faa6d49-1f02-44b8-8778-58860cca7c30.png" 
-                alt="XTSY Travellers Hostel Logo" 
-                className="h-24 md:h-32 mb-4"
-              />
-            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-6 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               Explore the Shillong Vibe
             </h1>
@@ -47,7 +40,7 @@ const Hero = () => {
               Find your vibe - we got your stay covered.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-white text-foreground hover:bg-white/90">
+              <Button size="lg" className="bg-red-600 text-white hover:bg-red-700">
                 Book Your Stay
               </Button>
               <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/20">

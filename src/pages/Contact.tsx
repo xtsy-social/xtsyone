@@ -1,13 +1,19 @@
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { DateRange } from "react-day-picker";
 import { cn } from "@/lib/utils";
 import { ChevronLeft, MapPin, Phone, Mail, Clock, Building, Users } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import { DateRangePicker } from "@/components/DateRangePicker";
 
 const Contact = () => {
   const [activeTab, setActiveTab] = useState<"individual" | "business">("individual");
   const [isLoaded, setIsLoaded] = useState(false);
+  const [dateRange, setDateRange] = useState<DateRange | undefined>({
+    from: undefined,
+    to: undefined,
+  });
 
   useEffect(() => {
     // Scroll to top on page load
@@ -77,6 +83,15 @@ const Contact = () => {
               </button>
             </div>
 
+            {/* Date Range Picker */}
+            <div className="mb-8">
+              <label className="block text-sm font-medium mb-1">Stay Duration</label>
+              <DateRangePicker 
+                dateRange={dateRange} 
+                onDateRangeChange={setDateRange} 
+              />
+            </div>
+
             {/* Contact Form */}
             <ContactForm type={activeTab} />
           </div>
@@ -94,7 +109,7 @@ const Contact = () => {
                   <MapPin className="h-5 w-5 text-primary mt-1 mr-4 flex-shrink-0" />
                   <div>
                     <h3 className="font-medium mb-1">Address</h3>
-                    <p className="text-muted-foreground">Police Bazar, Shillong, Meghalaya 793001, India</p>
+                    <p className="text-muted-foreground">XTSY Travellers Hostel, Diengïong, Shillong, Meghalaya 793018</p>
                   </div>
                 </div>
 
@@ -102,8 +117,7 @@ const Contact = () => {
                   <Phone className="h-5 w-5 text-primary mt-1 mr-4 flex-shrink-0" />
                   <div>
                     <h3 className="font-medium mb-1">Phone</h3>
-                    <p className="text-muted-foreground">+91 98765 43210</p>
-                    <p className="text-muted-foreground">+91 98765 12345 (Reservations)</p>
+                    <p className="text-muted-foreground">+91 98636 27070</p>
                   </div>
                 </div>
 
@@ -111,8 +125,7 @@ const Contact = () => {
                   <Mail className="h-5 w-5 text-primary mt-1 mr-4 flex-shrink-0" />
                   <div>
                     <h3 className="font-medium mb-1">Email</h3>
-                    <p className="text-muted-foreground">info@xtsyhostel.com</p>
-                    <p className="text-muted-foreground">bookings@xtsyhostel.com</p>
+                    <p className="text-muted-foreground">xtsy.one@gmail.com</p>
                   </div>
                 </div>
 
@@ -130,7 +143,7 @@ const Contact = () => {
               <h3 className="font-medium mb-3">Find Us On Map</h3>
               <div className="h-[300px] bg-muted rounded-lg overflow-hidden">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28585.15275130939!2d91.8667141743164!3d25.57742899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507e8f34bd207f%3A0x73848142383fae4a!2sPolice%20Bazar%2C%20Shillong%2C%20Meghalaya!5e0!3m2!1sen!2sin!4v1652347725281!5m2!1sen!2sin" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.2097123801086!2d91.89013407521109!3d25.582799077327244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3750591c0bd0ca95%3A0xaa4421ed5e2e3a24!2sXTSY%20Travellers%20Hostel!5e0!3m2!1sen!2sin!4v1716628577593!5m2!1sen!2sin" 
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
