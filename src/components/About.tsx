@@ -81,20 +81,34 @@ const About = () => {
             <Button className="mt-4">Contact Us</Button>
           </div>
 
-          {/* About image */}
+          {/* About images */}
           <div className={cn(
             "transition-all duration-700 delay-300 transform",
             isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
           )}>
-            <div className="relative">
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 rounded-lg"></div>
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-lg"></div>
-              <div className="rounded-lg overflow-hidden relative z-10 shadow-md">
-                <img 
-                  src="/DJI_20250324_133421_247.jpg" 
-                  alt="XTSY Hostel" 
-                  className="w-full h-[500px] object-cover"
-                />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Hostel image */}
+              <div className="relative">
+                <div className="absolute -top-2 -left-2 w-16 h-16 bg-primary/10 rounded-lg"></div>
+                <div className="rounded-lg overflow-hidden relative z-10 shadow-md">
+                  <img 
+                    src="/DJI_20250324_133421_247.jpg" 
+                    alt="XTSY Hostel" 
+                    className="w-full h-[240px] object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Seven Sisters Waterfall image */}
+              <div className="relative">
+                <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-primary/10 rounded-lg"></div>
+                <div className="rounded-lg overflow-hidden relative z-10 shadow-md">
+                  <img 
+                    src="https://images.unsplash.com/photo-1433086966358-54859d0ed716" 
+                    alt="Seven Sisters Waterfall, Meghalaya" 
+                    className="w-full h-[240px] object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
