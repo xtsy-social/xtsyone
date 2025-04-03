@@ -93,7 +93,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <ContactForm type={activeTab} />
+            <ContactForm type={activeTab} dateRange={dateRange} />
           </div>
 
           {/* Contact Info Section */}
