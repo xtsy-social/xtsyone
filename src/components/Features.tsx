@@ -1,3 +1,4 @@
+
 import { useRef, useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -7,32 +8,32 @@ const featuresList = [
   {
     id: "solo-travel",
     title: "Solo Travel",
-    description: "Join the exclusive community of independent adventurers discovering Meghalaya's hidden gems and authentic experiences.",
-    details: "Be among the select travelers who get to experience our guided hikes to secret locations not found on tourist maps. Connect with fellow adventurers in our intimate community spaces and gain insider access to Shillong's authentic music scene and local-favorite cafes.",
+    description: "Join our awesome community of independent travelers and discover Meghalaya's hidden gems together!",
+    details: "Ever wanted to explore secret spots that aren't on any tourist map? That's exactly what we do here! Our guided hikes take you to jaw-dropping locations only locals know about. Plus, our cozy community spaces are perfect for meeting fellow adventurers. Want insider access to Shillong's authentic music scene and the best local cafes? You got it when you stay with us!",
     icon: MapPin,
     image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
   {
     id: "group-booking",
     title: "Group Booking",
-    description: "Secure one of our limited group slots for an exclusive, customized Meghalaya experience unlike any other.",
-    details: "Our most sought-after accommodations sell out months in advance. Reserve space for up to 50 guests in our premium rooms and enjoy custom-crafted itineraries that showcase Meghalaya's best-kept secrets. Our seasonal special experiences are available only to group bookings.",
+    description: "Bringing your crew? Grab one of our group spots for an unforgettable Meghalaya adventure!",
+    details: "Heads up - our best rooms get snapped up months ahead of time! We can host up to 50 of your friends in our comfy spaces, and we'll craft a custom itinerary just for your gang. Want to know the coolest part? Our seasonal experiences (the ones everyone raves about on Instagram) are only available if you book as a group. Just saying!",
     icon: Users,
     image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
   {
     id: "weekend-getaway",
     title: "Weekend Getaway",
-    description: "Escape to Shillong's limited-season perfect weather while city-dwellers suffer in pollution and heat.",
-    details: "Experience the increasingly rare pleasure of India's cleanest mountain air while urban centers reach record pollution levels. Our premium weekend slots book up quickly, especially during festival seasons. Disconnect in one of our panoramic rooms that showcase stunning sunrise views reserved for early bookers.",
+    description: "Escape to Shillong's perfect weather while your friends back home deal with the heat and pollution!",
+    details: "Picture this: you're breathing in the freshest mountain air in India while scrolling through your friends' stories about record pollution levels back home. Our weekend spots fill up super fast, especially during festival season (no surprise there!). Wake up to the most incredible sunrise views from our panoramic rooms - but you'll need to book early to snag one of these beauties!",
     icon: Calendar,
     image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
   {
     id: "safe-place",
     title: "Safe Place to Chill",
-    description: "Experience our legendary evening events that guests rave about - limited spots available each night.",
-    details: "Our signature music nights and karaoke sessions have become famous among travelers, with many guests extending their stays just to participate. Our exclusive game tournaments and cultural evenings create connections that last long after your stay. Don't miss out on the secure, vibrant atmosphere that's made us Shillong's highest-rated hostel experience.",
+    description: "Our evening hangouts are legendary - everyone who stays wants to come back for more!",
+    details: "So many guests extend their stay just for our music nights and karaoke sessions (they're that good!). Our game tournaments? Epic. Cultural evenings? Unforgettable. The connections you'll make here last way beyond checkout time. No wonder we're Shillong's highest-rated hostel experience! Come see what everyone's talking about before all the spots are gone.",
     icon: Shield,
     image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
   },
