@@ -40,14 +40,14 @@ const ContactForm = ({ type, dateRange }: ContactFormProps) => {
 
   // Calculate total amount when dateRange or roomType changes
   useEffect(() => {
-    if (dateRange?.from && dateRange?.to) {
+    if (type === "individual" && dateRange?.from && dateRange?.to) {
       const days = differenceInDays(dateRange.to, dateRange.from) + 1; // Include both start and end days
       const pricePerNight = roomPrices[formData.roomType as keyof typeof roomPrices] || 0;
       setTotalAmount(days * pricePerNight);
     } else {
       setTotalAmount(0);
     }
-  }, [dateRange, formData.roomType]);
+  }, [dateRange, formData.roomType, type]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -158,32 +158,34 @@ const ContactForm = ({ type, dateRange }: ContactFormProps) => {
         </>
       )}
 
-      {/* Room Type Selection */}
-      <div>
-        <label htmlFor="roomType" className="block text-sm font-medium mb-1">
-          Preferred Accommodation
-        </label>
-        <select
-          id="roomType"
-          name="roomType"
-          value={formData.roomType}
-          onChange={handleChange}
-          className="w-full rounded-md border border-input px-3 py-2 bg-background text-sm"
-          required
-        >
-          <optgroup label="Dormitories">
-            <option value="dorm-8">Bed in 8 Bed Dormitory (₹649/night)</option>
-            <option value="dorm-6-female">Bed in 6 Bed Female Dormitory (₹699/night)</option>
-            <option value="dorm-6-mixed">Bed in 6 Bed Mixed Dormitory (₹699/night)</option>
-            <option value="dorm-4-mixed">Bed in 4 Bed Mixed Dormitory (₹849/night)</option>
-          </optgroup>
-          <optgroup label="Private Rooms">
-            <option value="king-mountain">King Room With Mountain View (₹3,999/night)</option>
-            <option value="deluxe-room">Deluxe Room with Forest View (₹3,499/night)</option>
-            <option value="premium-room">Premium Room with Balcony (₹4,299/night)</option>
-          </optgroup>
-        </select>
-      </div>
+      {/* Room Type Selection - Only show for individual users */}
+      {type === "individual" && (
+        <div>
+          <label htmlFor="roomType" className="block text-sm font-medium mb-1">
+            Preferred Accommodation
+          </label>
+          <select
+            id="roomType"
+            name="roomType"
+            value={formData.roomType}
+            onChange={handleChange}
+            className="w-full rounded-md border border-input px-3 py-2 bg-background text-sm"
+            required
+          >
+            <optgroup label="Dormitories">
+              <option value="dorm-8">Bed in 8 Bed Dormitory (₹649/night)</option>
+              <option value="dorm-6-female">Bed in 6 Bed Female Dormitory (₹699/night)</option>
+              <option value="dorm-6-mixed">Bed in 6 Bed Mixed Dormitory (₹699/night)</option>
+              <option value="dorm-4-mixed">Bed in 4 Bed Mixed Dormitory (₹849/night)</option>
+            </optgroup>
+            <optgroup label="Private Rooms">
+              <option value="king-mountain">King Room With Mountain View (₹3,999/night)</option>
+              <option value="deluxe-room">Deluxe Room with Forest View (₹3,499/night)</option>
+              <option value="premium-room">Premium Room with Balcony (₹4,299/night)</option>
+            </optgroup>
+          </select>
+        </div>
+      )}
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium mb-1">
@@ -200,8 +202,8 @@ const ContactForm = ({ type, dateRange }: ContactFormProps) => {
         />
       </div>
 
-      {/* Total Cost Section */}
-      {dateRange?.from && dateRange?.to && (
+      {/* Total Cost Section - Only show for individual users */}
+      {type === "individual" && dateRange?.from && dateRange?.to && (
         <div className="bg-secondary p-4 rounded-lg">
           <h3 className="text-lg font-medium mb-2">Stay Cost Estimate</h3>
           <div className="space-y-2 text-sm">

@@ -83,14 +83,16 @@ const Contact = () => {
               </button>
             </div>
 
-            {/* Date Range Picker */}
-            <div className="mb-8">
-              <label className="block text-sm font-medium mb-1">Stay Duration</label>
-              <DateRangePicker 
-                dateRange={dateRange} 
-                onDateRangeChange={setDateRange} 
-              />
-            </div>
+            {/* Date Range Picker - Only show for individual users */}
+            {activeTab === "individual" && (
+              <div className="mb-8">
+                <label className="block text-sm font-medium mb-1">Stay Duration</label>
+                <DateRangePicker 
+                  dateRange={dateRange} 
+                  onDateRangeChange={setDateRange} 
+                />
+              </div>
+            )}
 
             {/* Contact Form */}
             <ContactForm type={activeTab} dateRange={dateRange} />
