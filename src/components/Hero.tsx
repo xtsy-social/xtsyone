@@ -33,11 +33,11 @@ const Hero = () => {
         <div className="max-w-2xl">
           <div className={`transition-all duration-700 delay-300 transform ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-6 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-              Explore the Shillong Vibe
+              Live the Shillong Vibe
             </h1>
             <p className="text-xl md:text-2xl text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] mb-8">
-              Limited spots available! Join the lucky few experiencing Shillong's breathtaking hikes, 
-              exclusive team adventures, and serene views that others only dream about.
+              Hey there, adventure seeker! Grab one of our limited spots and dive into Shillong's magic – epic hikes, 
+              cool hangouts, and jaw-dropping views that'll make your Instagram explode!
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-red-600 text-white hover:bg-red-700">
