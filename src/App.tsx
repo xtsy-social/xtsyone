@@ -9,6 +9,7 @@ import { lazy, Suspense } from "react";
 // Layout components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import FloatingOrderButton from "./components/FloatingOrderButton";
 
 // Pages
 import Index from "./pages/Index";
@@ -38,6 +39,7 @@ const App = () => (
               </Routes>
             </Suspense>
           </main>
+          <FloatingOrderButton />
           <Footer />
         </div>
       </BrowserRouter>
