@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import FoodOrder from "./pages/FoodOrder";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/food-order" element={<FoodOrder />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
