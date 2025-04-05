@@ -34,6 +34,21 @@ const Header = () => {
     setIsOpen(false);
   }, [location]);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Only handle # links within the same page
+    if (href.includes('#') && (location.pathname === '/' || href.startsWith('/#'))) {
+      e.preventDefault();
+      const sectionId = href.split('#')[1];
+      const element = document.getElementById(sectionId);
+      
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        // Update URL without page reload
+        window.history.pushState(null, '', href);
+      }
+    }
+  };
+
   return (
     <header
       className={cn(
@@ -56,9 +71,10 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
-            <Link
+            <a
               key={item.label}
-              to={item.href}
+              href={item.href}
+              onClick={(e) => handleNavClick(e, item.href)}
               className={cn(
                 "text-sm font-medium transition-all duration-200 hover:text-primary",
                 (location.pathname === item.href || 
@@ -67,7 +83,7 @@ const Header = () => {
               )}
             >
               {item.label}
-            </Link>
+            </a>
           ))}
           <Button size="sm" className="animate-scale-in">
             Book Now
@@ -92,9 +108,10 @@ const Header = () => {
           <div className="fixed inset-0 bg-background/95 backdrop-blur-sm z-0 md:hidden">
             <nav className="flex flex-col items-center justify-center h-full space-y-6 animate-fade-in">
               {navItems.map((item) => (
-                <Link
+                <a
                   key={item.label}
-                  to={item.href}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className={cn(
                     "text-lg font-medium hover:text-primary",
                     (location.pathname === item.href || 
@@ -103,7 +120,7 @@ const Header = () => {
                   )}
                 >
                   {item.label}
-                </Link>
+                </a>
               ))}
               <Button size="lg" className="mt-4">
                 Book Now
