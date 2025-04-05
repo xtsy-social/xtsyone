@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Hero background with a nice blur effect on load */}
-      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/60 z-10"></div>
       <div
         className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ${
           isLoaded ? "scale-100 blur-0" : "scale-110 blur-sm"
@@ -32,10 +32,10 @@ const Hero = () => {
       <div className="container-section relative z-20 h-full flex flex-col justify-center items-start pt-16">
         <div className="max-w-2xl">
           <div className={`transition-all duration-700 delay-300 transform ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-6 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white drop-shadow-[0_2px_5px_rgba(0,0,0,1)]">
               Live the Shillong Vibe
             </h1>
-            <p className="text-xl md:text-2xl text-white drop-shadow-[0_1px_3px_rgba(0,0,0,1)] mb-8">
+            <p className="text-xl md:text-2xl font-medium text-white drop-shadow-[0_2px_4px_rgba(0,0,0,1)] mb-8">
               Hey there, adventure seeker! Grab one of our limited spots and dive into Shillong's magic – epic hikes, 
               cool hangouts, and jaw-dropping views that'll make your Instagram explode!
             </p>
@@ -57,8 +57,8 @@ const Hero = () => {
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
         >
-          <span className="text-sm mb-2 drop-shadow-[0_1px_2px_rgba(0,0,0,1)]">Scroll Down</span>
-          <ChevronDown className="h-6 w-6 animate-bounce drop-shadow-[0_1px_2px_rgba(0,0,0,1)]" />
+          <span className="text-sm font-medium mb-2 drop-shadow-[0_1px_3px_rgba(0,0,0,1)]">Scroll Down</span>
+          <ChevronDown className="h-6 w-6 animate-bounce drop-shadow-[0_1px_3px_rgba(0,0,0,1)]" />
         </button>
       </div>
     </section>
