@@ -25,7 +25,7 @@ const Hero = () => {
         className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ${
           isLoaded ? "scale-100 blur-0" : "scale-110 blur-sm"
         }`}
-        style={{ backgroundImage: "url('/lovable-uploads/16227c91-213c-4788-8f2a-7f395c94c51f.png')" }}
+        style={{ backgroundImage: "url('/https://twsyvqdrcjdeqirbuppj.supabase.co/storage/v1/object/public/hostel-wanderlust-images/Screenshot+2025-05-27+154807.png')" }}
       ></div>
       
       {/* Hero content */}
